@@ -1,4 +1,11 @@
-def calculate_eigen():
+
+import sympy as sp
+from sympy import *
+import numpy as np
+import tkinter as tk
+from tkinter import *
+
+def calculate_eigen(a1, b1, c1, a2, b2, c2, a3, b3, c3):
     # Get matrix elements from input fields
     try:
         a1 = int(entry_a1.get())
