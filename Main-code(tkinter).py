@@ -30,7 +30,7 @@ class tkinterApp(tk.Tk):
 
             # initializing frame of that object from
             # startpage, page1, page2 respectively with
-            # for loop
+            # for loopn
             self.frames[F] = frame
 
             frame.grid(row=0, column=0, sticky="nsew")
