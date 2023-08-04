@@ -45,6 +45,8 @@ def characteristiceqn(M: list)->str:
     return chareqn
 import sympy
 from sympy import Matrix
+
+
 def  eigenvals(N: list)->list       :
     a1 = int(N[0][0])
     b1 = int(N[0][1])
@@ -58,3 +60,11 @@ def  eigenvals(N: list)->list       :
     b3 = int(N[2][1])
     c3 = int(N[2][2])
 
+    M = Matrix([[a1, b1, c1], [a2, b2, c2], [a3, b3, c3]])
+    vals = M.eigenvals()
+    if len(vals) == 3:
+        vals = list(vals.keys())
+    elif len(vals) == 2:
+        vals = list(vals.keys())
+        vals.insert(0, vals[0])
+    return vals
